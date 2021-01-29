@@ -10,3 +10,5 @@
 - [Contributing Guidelines](CONTRIBUTING.md)
 - [License](LICENSE.md)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/json.net)
+---
+This is a fork to support Unity versions supported by [Deli](https://github.com/Deli-Counter/Deli).

@@ -12,8 +12,10 @@ BenchmarkDotNet.Artifacts/
 _ReSharper.*
 *.ReSharper.user
 *.resharper.user
+*.sln.DotSettings
 .vs/
 .vscode/
+.idea/
 *.lock.json
 *.nuget.props
 *.nuget.targets
