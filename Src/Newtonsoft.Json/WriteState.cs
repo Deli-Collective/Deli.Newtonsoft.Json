@@ -25,7 +25,7 @@
 
 using System;
 
-namespace Newtonsoft.Json
+namespace Deli.Newtonsoft.Json
 {
     /// <summary>
     /// Specifies the state of the <see cref="JsonWriter"/>.
@@ -45,7 +45,7 @@ namespace Newtonsoft.Json
         Closed = 1,
 
         /// <summary>
-        /// An object is being written. 
+        /// An object is being written.
         /// </summary>
         Object = 2,
 

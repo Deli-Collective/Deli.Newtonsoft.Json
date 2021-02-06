@@ -27,11 +27,11 @@ using System;
 using System.Globalization;
 using System.ComponentModel;
 using System.Collections.Generic;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Serialization;
+using Deli.Newtonsoft.Json.Linq;
+using Deli.Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Serialization;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using Deli.Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 
@@ -39,7 +39,7 @@ using System.Linq;
 
 #nullable disable
 
-namespace Newtonsoft.Json.Schema
+namespace Deli.Newtonsoft.Json.Schema
 {
     /// <summary>
     /// <para>

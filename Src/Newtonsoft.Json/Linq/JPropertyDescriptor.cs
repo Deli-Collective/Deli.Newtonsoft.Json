@@ -27,7 +27,7 @@
 using System;
 using System.ComponentModel;
 
-namespace Newtonsoft.Json.Linq
+namespace Deli.Newtonsoft.Json.Linq
 {
     /// <summary>
     /// Represents a view of a <see cref="JProperty"/>.

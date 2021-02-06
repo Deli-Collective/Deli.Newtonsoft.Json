@@ -32,15 +32,15 @@ using System.Security;
 #if HAVE_CAS
 using System.Security.Permissions;
 #endif
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Utilities;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using Deli.Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 using System.Runtime.Serialization;
 
-namespace Newtonsoft.Json.Serialization
+namespace Deli.Newtonsoft.Json.Serialization
 {
     internal static class JsonTypeReflector
     {
@@ -58,7 +58,7 @@ namespace Newtonsoft.Json.Serialization
 
         public const string ConcurrentDictionaryTypeName = "System.Collections.Concurrent.ConcurrentDictionary`2";
 
-        private static readonly ThreadSafeStore<Type, Func<object[]?, object>> CreatorCache = 
+        private static readonly ThreadSafeStore<Type, Func<object[]?, object>> CreatorCache =
             new ThreadSafeStore<Type, Func<object[]?, object>>(GetCreator);
 
 #if !(NET20 || DOTNET)

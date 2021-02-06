@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Newtonsoft.Json.Linq
+namespace Deli.Newtonsoft.Json.Linq
 {
     /// <summary>
     /// Specifies how null value properties are merged.

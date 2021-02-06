@@ -10,20 +10,20 @@
 //
 //      Atif Aziz, http://www.raboof.com
 //
-// This library is free software; you can redistribute it and/or modify it 
-// under the terms of the New BSD License, a copy of which should have 
+// This library is free software; you can redistribute it and/or modify it
+// under the terms of the New BSD License, a copy of which should have
 // been delivered along with this distribution.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
-// PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT 
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, 
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY 
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+// PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 #endregion
@@ -33,14 +33,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
-using Newtonsoft.Json.Serialization;
+using Deli.Newtonsoft.Json.Serialization;
 
 #nullable disable
 
-namespace Newtonsoft.Json.Utilities.LinqBridge
+namespace Deli.Newtonsoft.Json.Utilities.LinqBridge
 {
   /// <summary>
-  /// Provides a set of static (Shared in Visual Basic) methods for 
+  /// Provides a set of static (Shared in Visual Basic) methods for
   /// querying objects that implement <see cref="IEnumerable{T}" />.
   /// </summary>
   internal static partial class Enumerable
@@ -55,7 +55,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns an empty <see cref="IEnumerable{T}"/> that has the 
+    /// Returns an empty <see cref="IEnumerable{T}"/> that has the
     /// specified type argument.
     /// </summary>
 
@@ -65,7 +65,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Converts the elements of an <see cref="IEnumerable"/> to the 
+    /// Converts the elements of an <see cref="IEnumerable"/> to the
     /// specified type.
     /// </summary>
 
@@ -175,7 +175,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
           yield return item;
     }
     /// <summary>
-    /// Filters a sequence of values based on a predicate. 
+    /// Filters a sequence of values based on a predicate.
     /// Each element's index is used in the logic of the predicate function.
     /// </summary>
 
@@ -222,7 +222,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Projects each element of a sequence into a new form by 
+    /// Projects each element of a sequence into a new form by
     /// incorporating the element's index.
     /// </summary>
 
@@ -246,7 +246,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Projects each element of a sequence to an <see cref="IEnumerable{T}" /> 
+    /// Projects each element of a sequence to an <see cref="IEnumerable{T}" />
     /// and flattens the resulting sequences into one sequence.
     /// </summary>
 
@@ -260,9 +260,9 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Projects each element of a sequence to an <see cref="IEnumerable{T}" />, 
-    /// and flattens the resulting sequences into one sequence. The 
-    /// index of each source element is used in the projected form of 
+    /// Projects each element of a sequence to an <see cref="IEnumerable{T}" />,
+    /// and flattens the resulting sequences into one sequence. The
+    /// index of each source element is used in the projected form of
     /// that element.
     /// </summary>
 
@@ -276,8 +276,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Projects each element of a sequence to an <see cref="IEnumerable{T}" />, 
-    /// flattens the resulting sequences into one sequence, and invokes 
+    /// Projects each element of a sequence to an <see cref="IEnumerable{T}" />,
+    /// flattens the resulting sequences into one sequence, and invokes
     /// a result selector function on each element therein.
     /// </summary>
 
@@ -292,10 +292,10 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Projects each element of a sequence to an <see cref="IEnumerable{T}" />, 
-    /// flattens the resulting sequences into one sequence, and invokes 
-    /// a result selector function on each element therein. The index of 
-    /// each source element is used in the intermediate projected form 
+    /// Projects each element of a sequence to an <see cref="IEnumerable{T}" />,
+    /// flattens the resulting sequences into one sequence, and invokes
+    /// a result selector function on each element therein. The index of
+    /// each source element is used in the intermediate projected form
     /// of that element.
     /// </summary>
 
@@ -409,7 +409,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the first element of a sequence, or a default value if 
+    /// Returns the first element of a sequence, or a default value if
     /// the sequence contains no elements.
     /// </summary>
 
@@ -420,7 +420,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the first element of the sequence that satisfies a 
+    /// Returns the first element of the sequence that satisfies a
     /// condition or a default value if no such element is found.
     /// </summary>
 
@@ -468,7 +468,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the last element of a sequence that satisfies a 
+    /// Returns the last element of a sequence that satisfies a
     /// specified condition.
     /// </summary>
 
@@ -480,7 +480,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the last element of a sequence, or a default value if 
+    /// Returns the last element of a sequence, or a default value if
     /// the sequence contains no elements.
     /// </summary>
 
@@ -491,7 +491,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the last element of a sequence that satisfies a 
+    /// Returns the last element of a sequence that satisfies a
     /// condition or a default value if no such element is found.
     /// </summary>
 
@@ -528,7 +528,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the only element of a sequence, and throws an exception 
+    /// Returns the only element of a sequence, and throws an exception
     /// if there is not exactly one element in the sequence.
     /// </summary>
 
@@ -539,8 +539,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the only element of a sequence that satisfies a 
-    /// specified condition, and throws an exception if more than one 
+    /// Returns the only element of a sequence that satisfies a
+    /// specified condition, and throws an exception if more than one
     /// such element exists.
     /// </summary>
 
@@ -552,8 +552,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the only element of a sequence, or a default value if 
-    /// the sequence is empty; this method throws an exception if there 
+    /// Returns the only element of a sequence, or a default value if
+    /// the sequence is empty; this method throws an exception if there
     /// is more than one element in the sequence.
     /// </summary>
 
@@ -564,9 +564,9 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the only element of a sequence that satisfies a 
-    /// specified condition or a default value if no such element 
-    /// exists; this method throws an exception if more than one element 
+    /// Returns the only element of a sequence that satisfies a
+    /// specified condition or a default value if no such element
+    /// exists; this method throws an exception if more than one element
     /// satisfies the condition.
     /// </summary>
 
@@ -605,7 +605,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the element at a specified index in a sequence or a 
+    /// Returns the element at a specified index in a sequence or a
     /// default value if the index is out of range.
     /// </summary>
 
@@ -646,7 +646,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns a specified number of contiguous elements from the start 
+    /// Returns a specified number of contiguous elements from the start
     /// of a sequence.
     /// </summary>
 
@@ -658,7 +658,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Bypasses a specified number of elements in a sequence and then 
+    /// Bypasses a specified number of elements in a sequence and then
     /// returns the remaining elements.
     /// </summary>
 
@@ -670,7 +670,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Bypasses elements in a sequence as long as a specified condition 
+    /// Bypasses elements in a sequence as long as a specified condition
     /// is true and then returns the remaining elements.
     /// </summary>
 
@@ -684,8 +684,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Bypasses elements in a sequence as long as a specified condition 
-    /// is true and then returns the remaining elements. The element's 
+    /// Bypasses elements in a sequence as long as a specified condition
+    /// is true and then returns the remaining elements. The element's
     /// index is used in the logic of the predicate function.
     /// </summary>
 
@@ -749,7 +749,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns a number that represents how many elements in the 
+    /// Returns a number that represents how many elements in the
     /// specified sequence satisfy a condition.
     /// </summary>
 
@@ -844,7 +844,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
       }
 
       /// <summary>
-    /// Returns distinct elements from a sequence by using the default 
+    /// Returns distinct elements from a sequence by using the default
     /// equality comparer to compare values.
     /// </summary>
 
@@ -855,7 +855,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns distinct elements from a sequence by using a specified 
+    /// Returns distinct elements from a sequence by using a specified
     /// <see cref="IEqualityComparer{T}"/> to compare values.
     /// </summary>
 
@@ -895,8 +895,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Creates a <see cref="Lookup{TKey,TElement}" /> from an 
-    /// <see cref="IEnumerable{T}" /> according to a specified key 
+    /// Creates a <see cref="Lookup{TKey,TElement}" /> from an
+    /// <see cref="IEnumerable{T}" /> according to a specified key
     /// selector function.
     /// </summary>
 
@@ -908,8 +908,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Creates a <see cref="Lookup{TKey,TElement}" /> from an 
-    /// <see cref="IEnumerable{T}" /> according to a specified key 
+    /// Creates a <see cref="Lookup{TKey,TElement}" /> from an
+    /// <see cref="IEnumerable{T}" /> according to a specified key
     /// selector function and a key comparer.
     /// </summary>
 
@@ -922,8 +922,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Creates a <see cref="Lookup{TKey,TElement}" /> from an 
-    /// <see cref="IEnumerable{T}" /> according to specified key 
+    /// Creates a <see cref="Lookup{TKey,TElement}" /> from an
+    /// <see cref="IEnumerable{T}" /> according to specified key
     /// and element selector functions.
     /// </summary>
 
@@ -936,8 +936,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Creates a <see cref="Lookup{TKey,TElement}" /> from an 
-    /// <see cref="IEnumerable{T}" /> according to a specified key 
+    /// Creates a <see cref="Lookup{TKey,TElement}" /> from an
+    /// <see cref="IEnumerable{T}" /> according to a specified key
     /// selector function, a comparer and an element selector function.
     /// </summary>
 
@@ -971,7 +971,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Groups the elements of a sequence according to a specified key 
+    /// Groups the elements of a sequence according to a specified key
     /// selector function.
     /// </summary>
 
@@ -983,8 +983,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Groups the elements of a sequence according to a specified key 
-    /// selector function and compares the keys by using a specified 
+    /// Groups the elements of a sequence according to a specified key
+    /// selector function and compares the keys by using a specified
     /// comparer.
     /// </summary>
 
@@ -997,8 +997,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Groups the elements of a sequence according to a specified key 
-    /// selector function and projects the elements for each group by 
+    /// Groups the elements of a sequence according to a specified key
+    /// selector function and projects the elements for each group by
     /// using a specified function.
     /// </summary>
 
@@ -1011,8 +1011,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Groups the elements of a sequence according to a specified key 
-    /// selector function and creates a result value from each group and 
+    /// Groups the elements of a sequence according to a specified key
+    /// selector function and creates a result value from each group and
     /// its key.
     /// </summary>
 
@@ -1030,8 +1030,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Groups the elements of a sequence according to a key selector 
-    /// function. The keys are compared by using a comparer and each 
+    /// Groups the elements of a sequence according to a key selector
+    /// function. The keys are compared by using a comparer and each
     /// group's elements are projected by using a specified function.
     /// </summary>
 
@@ -1044,9 +1044,9 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Groups the elements of a sequence according to a specified key 
-    /// selector function and creates a result value from each group and 
-    /// its key. The elements of each group are projected by using a 
+    /// Groups the elements of a sequence according to a specified key
+    /// selector function and creates a result value from each group and
+    /// its key. The elements of each group are projected by using a
     /// specified function.
     /// </summary>
 
@@ -1064,8 +1064,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Groups the elements of a sequence according to a specified key 
-    /// selector function and creates a result value from each group and 
+    /// Groups the elements of a sequence according to a specified key
+    /// selector function and creates a result value from each group and
     /// its key. The keys are compared by using a specified comparer.
     /// </summary>
 
@@ -1079,10 +1079,10 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Groups the elements of a sequence according to a specified key 
-    /// selector function and creates a result value from each group and 
-    /// its key. Key values are compared by using a specified comparer, 
-    /// and the elements of each group are projected by using a 
+    /// Groups the elements of a sequence according to a specified key
+    /// selector function and creates a result value from each group and
+    /// its key. Key values are compared by using a specified comparer,
+    /// and the elements of each group are projected by using a
     /// specified function.
     /// </summary>
 
@@ -1123,7 +1123,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Applies an accumulator function over a sequence. The specified 
+    /// Applies an accumulator function over a sequence. The specified
     /// seed value is used as the initial accumulator value.
     /// </summary>
 
@@ -1136,8 +1136,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Applies an accumulator function over a sequence. The specified 
-    /// seed value is used as the initial accumulator value, and the 
+    /// Applies an accumulator function over a sequence. The specified
+    /// seed value is used as the initial accumulator value, and the
     /// specified function is used to select the result value.
     /// </summary>
 
@@ -1160,7 +1160,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Produces the set union of two sequences by using the default 
+    /// Produces the set union of two sequences by using the default
     /// equality comparer.
     /// </summary>
 
@@ -1172,7 +1172,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Produces the set union of two sequences by using a specified 
+    /// Produces the set union of two sequences by using a specified
     /// <see cref="IEqualityComparer{T}" />.
     /// </summary>
 
@@ -1185,8 +1185,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the elements of the specified sequence or the type 
-    /// parameter's default value in a singleton collection if the 
+    /// Returns the elements of the specified sequence or the type
+    /// parameter's default value in a singleton collection if the
     /// sequence is empty.
     /// </summary>
 
@@ -1197,7 +1197,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the elements of the specified sequence or the specified 
+    /// Returns the elements of the specified sequence or the specified
     /// value in a singleton collection if the sequence is empty.
     /// </summary>
 
@@ -1258,7 +1258,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Determines whether any element of a sequence satisfies a 
+    /// Determines whether any element of a sequence satisfies a
     /// condition.
     /// </summary>
 
@@ -1278,7 +1278,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Determines whether a sequence contains a specified element by 
+    /// Determines whether a sequence contains a specified element by
     /// using the default equality comparer.
     /// </summary>
 
@@ -1290,7 +1290,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Determines whether a sequence contains a specified element by 
+    /// Determines whether a sequence contains a specified element by
     /// using a specified <see cref="IEqualityComparer{T}" />.
     /// </summary>
 
@@ -1313,7 +1313,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Determines whether two sequences are equal by comparing the 
+    /// Determines whether two sequences are equal by comparing the
     /// elements by using the default equality comparer for their type.
     /// </summary>
 
@@ -1325,7 +1325,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Determines whether two sequences are equal by comparing their 
+    /// Determines whether two sequences are equal by comparing their
     /// elements by using a specified <see cref="IEqualityComparer{T}" />.
     /// </summary>
 
@@ -1396,7 +1396,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a generic 
+    /// Invokes a transform function on each element of a generic
     /// sequence and returns the minimum resulting value.
     /// </summary>
 
@@ -1419,7 +1419,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a generic 
+    /// Invokes a transform function on each element of a generic
     /// sequence and returns the maximum resulting value.
     /// </summary>
 
@@ -1462,7 +1462,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Sorts the elements of a sequence in ascending order by using a 
+    /// Sorts the elements of a sequence in ascending order by using a
     /// specified comparer.
     /// </summary>
 
@@ -1489,8 +1489,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    ///  Sorts the elements of a sequence in descending order by using a 
-    /// specified comparer. 
+    ///  Sorts the elements of a sequence in descending order by using a
+    /// specified comparer.
     /// </summary>
 
     public static IOrderedEnumerable<TSource> OrderByDescending<TSource, TKey>(
@@ -1505,7 +1505,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Performs a subsequent ordering of the elements in a sequence in 
+    /// Performs a subsequent ordering of the elements in a sequence in
     /// ascending order according to a key.
     /// </summary>
 
@@ -1517,7 +1517,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Performs a subsequent ordering of the elements in a sequence in 
+    /// Performs a subsequent ordering of the elements in a sequence in
     /// ascending order by using a specified comparer.
     /// </summary>
 
@@ -1532,7 +1532,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Performs a subsequent ordering of the elements in a sequence in 
+    /// Performs a subsequent ordering of the elements in a sequence in
     /// descending order, according to a key.
     /// </summary>
 
@@ -1544,7 +1544,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Performs a subsequent ordering of the elements in a sequence in 
+    /// Performs a subsequent ordering of the elements in a sequence in
     /// descending order by using a specified comparer.
     /// </summary>
 
@@ -1584,7 +1584,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
         flags[item] = flag;
 
       //
-      // As per docs, "the marked elements are yielded in the order in 
+      // As per docs, "the marked elements are yielded in the order in
       // which they were collected.
       //
 
@@ -1592,7 +1592,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Produces the set intersection of two sequences by using the 
+    /// Produces the set intersection of two sequences by using the
     /// default equality comparer to compare values.
     /// </summary>
 
@@ -1604,7 +1604,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Produces the set intersection of two sequences by using the 
+    /// Produces the set intersection of two sequences by using the
     /// specified <see cref="IEqualityComparer{T}" /> to compare values.
     /// </summary>
 
@@ -1617,7 +1617,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Produces the set difference of two sequences by using the 
+    /// Produces the set difference of two sequences by using the
     /// default equality comparer to compare values.
     /// </summary>
 
@@ -1629,7 +1629,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Produces the set difference of two sequences by using the 
+    /// Produces the set difference of two sequences by using the
     /// specified <see cref="IEqualityComparer{T}" /> to compare values.
     /// </summary>
 
@@ -1642,8 +1642,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Creates a <see cref="Dictionary{TKey,TValue}" /> from an 
-    /// <see cref="IEnumerable{T}" /> according to a specified key 
+    /// Creates a <see cref="Dictionary{TKey,TValue}" /> from an
+    /// <see cref="IEnumerable{T}" /> according to a specified key
     /// selector function.
     /// </summary>
 
@@ -1655,8 +1655,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Creates a <see cref="Dictionary{TKey,TValue}" /> from an 
-    /// <see cref="IEnumerable{T}" /> according to a specified key 
+    /// Creates a <see cref="Dictionary{TKey,TValue}" /> from an
+    /// <see cref="IEnumerable{T}" /> according to a specified key
     /// selector function and key comparer.
     /// </summary>
 
@@ -1669,8 +1669,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Creates a <see cref="Dictionary{TKey,TValue}" /> from an 
-    /// <see cref="IEnumerable{T}" /> according to specified key 
+    /// Creates a <see cref="Dictionary{TKey,TValue}" /> from an
+    /// <see cref="IEnumerable{T}" /> according to specified key
     /// selector and element selector functions.
     /// </summary>
 
@@ -1683,8 +1683,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Creates a <see cref="Dictionary{TKey,TValue}" /> from an 
-    /// <see cref="IEnumerable{T}" /> according to a specified key 
+    /// Creates a <see cref="Dictionary{TKey,TValue}" /> from an
+    /// <see cref="IEnumerable{T}" /> according to a specified key
     /// selector function, a comparer, and an element selector function.
     /// </summary>
 
@@ -1704,8 +1704,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
       {
         //
         // ToDictionary is meant to throw ArgumentNullException if
-        // keySelector produces a key that is null and 
-        // Argument exception if keySelector produces duplicate keys 
+        // keySelector produces a key that is null and
+        // Argument exception if keySelector produces duplicate keys
         // for two elements. Incidentally, the documentation for
         // IDictionary<TKey, TValue>.Add says that the Add method
         // throws the same exceptions under the same circumstances
@@ -1721,7 +1721,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Correlates the elements of two sequences based on matching keys. 
+    /// Correlates the elements of two sequences based on matching keys.
     /// The default equality comparer is used to compare keys.
     /// </summary>
 
@@ -1736,8 +1736,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Correlates the elements of two sequences based on matching keys. 
-    /// The default equality comparer is used to compare keys. A 
+    /// Correlates the elements of two sequences based on matching keys.
+    /// The default equality comparer is used to compare keys. A
     /// specified <see cref="IEqualityComparer{T}" /> is used to compare keys.
     /// </summary>
 
@@ -1764,8 +1764,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Correlates the elements of two sequences based on equality of 
-    /// keys and groups the results. The default equality comparer is 
+    /// Correlates the elements of two sequences based on equality of
+    /// keys and groups the results. The default equality comparer is
     /// used to compare keys.
     /// </summary>
 
@@ -1780,9 +1780,9 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Correlates the elements of two sequences based on equality of 
-    /// keys and groups the results. The default equality comparer is 
-    /// used to compare keys. A specified <see cref="IEqualityComparer{T}" /> 
+    /// Correlates the elements of two sequences based on equality of
+    /// keys and groups the results. The default equality comparer is
+    /// used to compare keys. A specified <see cref="IEqualityComparer{T}" />
     /// is used to compare keys.
     /// </summary>
 
@@ -1847,7 +1847,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the sum of a sequence of <see cref="System.Int32" />
-    /// values that are obtained by invoking a transform function on 
+    /// values that are obtained by invoking a transform function on
     /// each element of the input sequence.
     /// </summary>
 
@@ -1885,7 +1885,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the average of a sequence of <see cref="System.Int32" /> values
-    /// that are obtained by invoking a transform function on each 
+    /// that are obtained by invoking a transform function on each
     /// element of the input sequence.
     /// </summary>
 
@@ -1915,7 +1915,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the sum of a sequence of nullable <see cref="System.Int32" />
-    /// values that are obtained by invoking a transform function on 
+    /// values that are obtained by invoking a transform function on
     /// each element of the input sequence.
     /// </summary>
 
@@ -1953,7 +1953,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the average of a sequence of nullable <see cref="System.Int32" /> values
-    /// that are obtained by invoking a transform function on each 
+    /// that are obtained by invoking a transform function on each
     /// element of the input sequence.
     /// </summary>
 
@@ -1965,7 +1965,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the minimum value in a sequence of nullable 
+    /// Returns the minimum value in a sequence of nullable
     /// <see cref="System.Int32" /> values.
     /// </summary>
 
@@ -1978,7 +1978,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a sequence and 
+    /// Invokes a transform function on each element of a sequence and
     /// returns the minimum nullable <see cref="System.Int32" /> value.
     /// </summary>
 
@@ -1990,7 +1990,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the maximum value in a sequence of nullable 
+    /// Returns the maximum value in a sequence of nullable
     /// <see cref="System.Int32" /> values.
     /// </summary>
 
@@ -2004,7 +2004,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a sequence and 
+    /// Invokes a transform function on each element of a sequence and
     /// returns the maximum nullable <see cref="System.Int32" /> value.
     /// </summary>
 
@@ -2033,7 +2033,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the sum of a sequence of <see cref="System.Int64" />
-    /// values that are obtained by invoking a transform function on 
+    /// values that are obtained by invoking a transform function on
     /// each element of the input sequence.
     /// </summary>
 
@@ -2071,7 +2071,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the average of a sequence of <see cref="System.Int64" /> values
-    /// that are obtained by invoking a transform function on each 
+    /// that are obtained by invoking a transform function on each
     /// element of the input sequence.
     /// </summary>
 
@@ -2101,7 +2101,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the sum of a sequence of nullable <see cref="System.Int64" />
-    /// values that are obtained by invoking a transform function on 
+    /// values that are obtained by invoking a transform function on
     /// each element of the input sequence.
     /// </summary>
 
@@ -2139,7 +2139,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the average of a sequence of nullable <see cref="System.Int64" /> values
-    /// that are obtained by invoking a transform function on each 
+    /// that are obtained by invoking a transform function on each
     /// element of the input sequence.
     /// </summary>
 
@@ -2151,7 +2151,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the minimum value in a sequence of nullable 
+    /// Returns the minimum value in a sequence of nullable
     /// <see cref="System.Int64" /> values.
     /// </summary>
 
@@ -2164,7 +2164,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a sequence and 
+    /// Invokes a transform function on each element of a sequence and
     /// returns the minimum nullable <see cref="System.Int64" /> value.
     /// </summary>
 
@@ -2176,7 +2176,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the maximum value in a sequence of nullable 
+    /// Returns the maximum value in a sequence of nullable
     /// <see cref="System.Int64" /> values.
     /// </summary>
 
@@ -2190,7 +2190,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a sequence and 
+    /// Invokes a transform function on each element of a sequence and
     /// returns the maximum nullable <see cref="System.Int64" /> value.
     /// </summary>
 
@@ -2219,7 +2219,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the sum of a sequence of <see cref="System.Single" />
-    /// values that are obtained by invoking a transform function on 
+    /// values that are obtained by invoking a transform function on
     /// each element of the input sequence.
     /// </summary>
 
@@ -2257,7 +2257,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the average of a sequence of <see cref="System.Single" /> values
-    /// that are obtained by invoking a transform function on each 
+    /// that are obtained by invoking a transform function on each
     /// element of the input sequence.
     /// </summary>
 
@@ -2287,7 +2287,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the sum of a sequence of nullable <see cref="System.Single" />
-    /// values that are obtained by invoking a transform function on 
+    /// values that are obtained by invoking a transform function on
     /// each element of the input sequence.
     /// </summary>
 
@@ -2325,7 +2325,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the average of a sequence of nullable <see cref="System.Single" /> values
-    /// that are obtained by invoking a transform function on each 
+    /// that are obtained by invoking a transform function on each
     /// element of the input sequence.
     /// </summary>
 
@@ -2337,7 +2337,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the minimum value in a sequence of nullable 
+    /// Returns the minimum value in a sequence of nullable
     /// <see cref="System.Single" /> values.
     /// </summary>
 
@@ -2350,7 +2350,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a sequence and 
+    /// Invokes a transform function on each element of a sequence and
     /// returns the minimum nullable <see cref="System.Single" /> value.
     /// </summary>
 
@@ -2362,7 +2362,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the maximum value in a sequence of nullable 
+    /// Returns the maximum value in a sequence of nullable
     /// <see cref="System.Single" /> values.
     /// </summary>
 
@@ -2376,7 +2376,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a sequence and 
+    /// Invokes a transform function on each element of a sequence and
     /// returns the maximum nullable <see cref="System.Single" /> value.
     /// </summary>
 
@@ -2405,7 +2405,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the sum of a sequence of <see cref="System.Double" />
-    /// values that are obtained by invoking a transform function on 
+    /// values that are obtained by invoking a transform function on
     /// each element of the input sequence.
     /// </summary>
 
@@ -2443,7 +2443,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the average of a sequence of <see cref="System.Double" /> values
-    /// that are obtained by invoking a transform function on each 
+    /// that are obtained by invoking a transform function on each
     /// element of the input sequence.
     /// </summary>
 
@@ -2473,7 +2473,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the sum of a sequence of nullable <see cref="System.Double" />
-    /// values that are obtained by invoking a transform function on 
+    /// values that are obtained by invoking a transform function on
     /// each element of the input sequence.
     /// </summary>
 
@@ -2511,7 +2511,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the average of a sequence of nullable <see cref="System.Double" /> values
-    /// that are obtained by invoking a transform function on each 
+    /// that are obtained by invoking a transform function on each
     /// element of the input sequence.
     /// </summary>
 
@@ -2523,7 +2523,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the minimum value in a sequence of nullable 
+    /// Returns the minimum value in a sequence of nullable
     /// <see cref="System.Double" /> values.
     /// </summary>
 
@@ -2536,7 +2536,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a sequence and 
+    /// Invokes a transform function on each element of a sequence and
     /// returns the minimum nullable <see cref="System.Double" /> value.
     /// </summary>
 
@@ -2548,7 +2548,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the maximum value in a sequence of nullable 
+    /// Returns the maximum value in a sequence of nullable
     /// <see cref="System.Double" /> values.
     /// </summary>
 
@@ -2562,7 +2562,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a sequence and 
+    /// Invokes a transform function on each element of a sequence and
     /// returns the maximum nullable <see cref="System.Double" /> value.
     /// </summary>
 
@@ -2591,7 +2591,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the sum of a sequence of <see cref="System.Decimal" />
-    /// values that are obtained by invoking a transform function on 
+    /// values that are obtained by invoking a transform function on
     /// each element of the input sequence.
     /// </summary>
 
@@ -2638,7 +2638,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the average of a sequence of <see cref="System.Decimal" /> values
-    /// that are obtained by invoking a transform function on each 
+    /// that are obtained by invoking a transform function on each
     /// element of the input sequence.
     /// </summary>
 
@@ -2668,7 +2668,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the sum of a sequence of nullable <see cref="System.Decimal" />
-    /// values that are obtained by invoking a transform function on 
+    /// values that are obtained by invoking a transform function on
     /// each element of the input sequence.
     /// </summary>
 
@@ -2706,7 +2706,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <summary>
     /// Computes the average of a sequence of nullable <see cref="System.Decimal" /> values
-    /// that are obtained by invoking a transform function on each 
+    /// that are obtained by invoking a transform function on each
     /// element of the input sequence.
     /// </summary>
 
@@ -2718,7 +2718,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the minimum value in a sequence of nullable 
+    /// Returns the minimum value in a sequence of nullable
     /// <see cref="System.Decimal" /> values.
     /// </summary>
 
@@ -2731,7 +2731,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a sequence and 
+    /// Invokes a transform function on each element of a sequence and
     /// returns the minimum nullable <see cref="System.Decimal" /> value.
     /// </summary>
 
@@ -2743,7 +2743,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Returns the maximum value in a sequence of nullable 
+    /// Returns the maximum value in a sequence of nullable
     /// <see cref="System.Decimal" /> values.
     /// </summary>
 
@@ -2757,7 +2757,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Invokes a transform function on each element of a sequence and 
+    /// Invokes a transform function on each element of a sequence and
     /// returns the maximum nullable <see cref="System.Decimal" /> value.
     /// </summary>
 
@@ -2782,8 +2782,8 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
   }
 
   /// <summary>
-  /// Defines an indexer, size property, and Boolean search method for 
-  /// data structures that map keys to <see cref="IEnumerable{T}"/> 
+  /// Defines an indexer, size property, and Boolean search method for
+  /// data structures that map keys to <see cref="IEnumerable{T}"/>
   /// sequences of values.
   /// </summary>
   internal partial interface ILookup<TKey, TElement> : IEnumerable<IGrouping<TKey, TElement>>
@@ -2799,7 +2799,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
   internal partial interface IOrderedEnumerable<TElement> : IEnumerable<TElement>
   {
     /// <summary>
-    /// Performs a subsequent ordering on the elements of an 
+    /// Performs a subsequent ordering on the elements of an
     /// <see cref="IOrderedEnumerable{T}"/> according to a key.
     /// </summary>
 
@@ -2859,7 +2859,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     }
 
     /// <summary>
-    /// Applies a transform function to each key and its associated 
+    /// Applies a transform function to each key and its associated
     /// values and returns the results.
     /// </summary>
 
@@ -2927,11 +2927,11 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
     public IEnumerator<T> GetEnumerator()
     {
       //
-      // We sort using List<T>.Sort, but docs say that it performs an 
-      // unstable sort. LINQ, on the other hand, says OrderBy performs 
-      // a stable sort. So convert the source sequence into a sequence 
-      // of tuples where the second element tags the position of the 
-      // element from the source sequence (First). The position is 
+      // We sort using List<T>.Sort, but docs say that it performs an
+      // unstable sort. LINQ, on the other hand, says OrderBy performs
+      // a stable sort. So convert the source sequence into a sequence
+      // of tuples where the second element tags the position of the
+      // element from the source sequence (First). The position is
       // then used as a tie breaker when all keys compare equal,
       // thus making the sort stable.
       //
@@ -2966,7 +2966,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <remarks>
     /// See <a href="http://code.google.com/p/linqbridge/issues/detail?id=11">issue #11</a>
-    /// for why this method is needed and cannot be expressed as a 
+    /// for why this method is needed and cannot be expressed as a
     /// lambda at the call site.
     /// </remarks>
 
@@ -2977,7 +2977,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
 
     /// <remarks>
     /// See <a href="http://code.google.com/p/linqbridge/issues/detail?id=11">issue #11</a>
-    /// for why this method is needed and cannot be expressed as a 
+    /// for why this method is needed and cannot be expressed as a
     /// lambda at the call site.
     /// </remarks>
 
@@ -3032,7 +3032,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
   }
 }
 
-namespace Newtonsoft.Json.Serialization
+namespace Deli.Newtonsoft.Json.Serialization
 {
 #pragma warning disable 1591
   public delegate TResult Func<TResult>();
@@ -3058,11 +3058,11 @@ namespace Newtonsoft.Json.Serialization
 namespace System.Runtime.CompilerServices
 {
   /// <remarks>
-  /// This attribute allows us to define extension methods without 
+  /// This attribute allows us to define extension methods without
   /// requiring .NET Framework 3.5. For more information, see the section,
   /// <a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx#S7">Extension Methods in .NET Framework 2.0 Apps</a>,
   /// of <a href="http://msdn.microsoft.com/en-us/magazine/cc163317.aspx">Basic Instincts: Extension Methods</a>
-  /// column in <a href="http://msdn.microsoft.com/msdnmag/">MSDN Magazine</a>, 
+  /// column in <a href="http://msdn.microsoft.com/msdnmag/">MSDN Magazine</a>,
   /// issue <a href="http://msdn.microsoft.com/en-us/magazine/cc135410.aspx">Nov 2007</a>.
   /// </remarks>
 

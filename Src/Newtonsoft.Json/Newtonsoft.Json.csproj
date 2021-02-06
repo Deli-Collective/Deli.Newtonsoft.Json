@@ -13,7 +13,7 @@
     <Summary>Json.NET is a popular high-performance JSON framework for .NET</Summary>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Title>Json.NET</Title>
-    <RootNamespace>Newtonsoft.Json</RootNamespace>
+    <RootNamespace>Deli.Newtonsoft.Json</RootNamespace>
     <AssemblyName>Deli.Newtonsoft.Json</AssemblyName>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Nullable>enable</Nullable>

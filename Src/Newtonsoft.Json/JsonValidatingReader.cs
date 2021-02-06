@@ -28,14 +28,14 @@ using System.Collections.Generic;
 #if HAVE_BIG_INTEGER
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Linq;
+using Deli.Newtonsoft.Json.Schema;
+using Deli.Newtonsoft.Json.Utilities;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.IO;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using Deli.Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 
@@ -43,7 +43,7 @@ using System.Linq;
 
 #nullable disable
 
-namespace Newtonsoft.Json
+namespace Deli.Newtonsoft.Json
 {
     /// <summary>
     /// <para>
@@ -123,7 +123,7 @@ namespace Newtonsoft.Json
         public override int Depth => _reader.Depth;
 
         /// <summary>
-        /// Gets the path of the current JSON token. 
+        /// Gets the path of the current JSON token.
         /// </summary>
         public override string Path => _reader.Path;
 

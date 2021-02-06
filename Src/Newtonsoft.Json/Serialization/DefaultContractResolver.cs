@@ -28,7 +28,7 @@ using System.Collections;
 #if HAVE_CONCURRENT_DICTIONARY
 using System.Collections.Concurrent;
 #endif
-using Newtonsoft.Json.Schema;
+using Deli.Newtonsoft.Json.Schema;
 using System.Collections.Generic;
 using System.ComponentModel;
 #if HAVE_DYNAMIC
@@ -41,19 +41,19 @@ using System.Runtime.Serialization;
 #if HAVE_CAS
 using System.Security.Permissions;
 #endif
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Linq;
+using Deli.Newtonsoft.Json.Converters;
+using Deli.Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Linq;
 using System.Runtime.CompilerServices;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using Deli.Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 
 #endif
-using Newtonsoft.Json.Serialization;
+using Deli.Newtonsoft.Json.Serialization;
 
-namespace Newtonsoft.Json.Serialization
+namespace Deli.Newtonsoft.Json.Serialization
 {
     /// <summary>
     /// Used by <see cref="JsonSerializer"/> to resolve a <see cref="JsonContract"/> for a given <see cref="System.Type"/>.
@@ -1529,7 +1529,7 @@ namespace Newtonsoft.Json.Serialization
             {
                 property.PropertyName = ResolvePropertyName(mappedName);
             }
-            
+
             property.UnderlyingName = name;
 
             bool hasMemberAttribute = false;

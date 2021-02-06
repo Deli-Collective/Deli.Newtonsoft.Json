@@ -32,10 +32,10 @@ using System.Numerics;
 using System.Text;
 using System.IO;
 using System.Xml;
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Utilities;
 using System.Diagnostics;
 
-namespace Newtonsoft.Json
+namespace Deli.Newtonsoft.Json
 {
     /// <summary>
     /// Represents a writer that provides a fast, non-cached, forward-only way of generating JSON data.
@@ -775,7 +775,7 @@ namespace Newtonsoft.Json
         #endregion
 
         /// <summary>
-        /// Writes a comment <c>/*...*/</c> containing the specified text. 
+        /// Writes a comment <c>/*...*/</c> containing the specified text.
         /// </summary>
         /// <param name="text">Text to place inside the comment.</param>
         public override void WriteComment(string? text)

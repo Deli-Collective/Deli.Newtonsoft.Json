@@ -28,10 +28,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Linq;
+using Deli.Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json.Serialization
+namespace Deli.Newtonsoft.Json.Serialization
 {
     internal enum JsonContractType
     {
@@ -247,7 +247,7 @@ namespace Newtonsoft.Json.Serialization
             underlyingType = ReflectionUtils.EnsureNotByRefType(underlyingType);
 
             IsNullable = ReflectionUtils.IsNullable(underlyingType);
-             
+
             NonNullableUnderlyingType = (IsNullable && ReflectionUtils.IsNullableType(underlyingType)) ? Nullable.GetUnderlyingType(underlyingType) : underlyingType;
 
             _createdType = CreatedType = NonNullableUnderlyingType;

@@ -26,18 +26,18 @@
 using System;
 using System.Collections.Generic;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using Deli.Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 using System.Reflection;
 
-namespace Newtonsoft.Json.Utilities
+namespace Deli.Newtonsoft.Json.Utilities
 {
 #if PORTABLE
     internal static class MethodBinder
     {
-        
+
         /// <summary>
         /// List of primitive types which can be widened.
         /// </summary>
@@ -52,8 +52,8 @@ namespace Newtonsoft.Json.Utilities
         /// Widening masks for primitive types above.
         /// Index of the value in this array defines a type we're widening,
         /// while the bits in mask define types it can be widened to (including itself).
-        /// 
-        /// For example, value at index 0 defines a bool type, and it only has bit 0 set, 
+        ///
+        /// For example, value at index 0 defines a bool type, and it only has bit 0 set,
         /// i.e. bool values can be assigned only to bool.
         /// </summary>
         private static readonly int[] WideningMasks = new int[]
@@ -64,7 +64,7 @@ namespace Newtonsoft.Json.Utilities
         };
 
         /// <summary>
-        /// Checks if value of primitive type <paramref name="from"/> can be  
+        /// Checks if value of primitive type <paramref name="from"/> can be
         /// assigned to parameter of primitive type <paramref name="to"/>.
         /// </summary>
         /// <param name="from">Source primitive type.</param>
@@ -103,7 +103,7 @@ namespace Newtonsoft.Json.Utilities
 
         /// <summary>
         /// Checks if a set of values with given <paramref name="types"/> can be used
-        /// to invoke a method with specified <paramref name="parameters"/>. 
+        /// to invoke a method with specified <paramref name="parameters"/>.
         /// </summary>
         /// <param name="parameters">Method parameters.</param>
         /// <param name="types">Argument types.</param>
@@ -180,7 +180,7 @@ namespace Newtonsoft.Json.Utilities
         }
 
         /// <summary>
-        /// Compares two sets of parameters to determine 
+        /// Compares two sets of parameters to determine
         /// which one suits better for given argument types.
         /// </summary>
         private class ParametersMatchComparer : IComparer<ParameterInfo[]>
@@ -262,7 +262,7 @@ namespace Newtonsoft.Json.Utilities
                     int r = ChooseMorePreciseType(type1, type2);
                     if (r != 0)
                     {
-                        // winner decided 
+                        // winner decided
                         return r;
                     }
                 }

@@ -29,16 +29,16 @@ using System.IO;
 #if HAVE_BIG_INTEGER
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Utilities;
 using System.Globalization;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using Deli.Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json
+namespace Deli.Newtonsoft.Json
 {
     /// <summary>
     /// Represents a writer that provides a fast, non-cached, forward-only way of generating JSON data.
@@ -201,7 +201,7 @@ namespace Newtonsoft.Json
         }
 
         /// <summary>
-        /// Gets the path of the writer. 
+        /// Gets the path of the writer.
         /// </summary>
         public string Path
         {

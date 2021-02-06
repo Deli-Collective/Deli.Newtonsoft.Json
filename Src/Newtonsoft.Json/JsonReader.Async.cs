@@ -29,9 +29,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json
+namespace Deli.Newtonsoft.Json
 {
     public abstract partial class JsonReader
     {

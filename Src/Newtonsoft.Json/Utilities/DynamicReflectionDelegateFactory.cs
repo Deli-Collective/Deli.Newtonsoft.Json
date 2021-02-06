@@ -27,14 +27,14 @@
 using System;
 using System.Collections.Generic;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using Deli.Newtonsoft.Json.Utilities.LinqBridge;
 #endif
 using System.Reflection;
 using System.Reflection.Emit;
-using Newtonsoft.Json.Serialization;
+using Deli.Newtonsoft.Json.Serialization;
 using System.Globalization;
 
-namespace Newtonsoft.Json.Utilities
+namespace Deli.Newtonsoft.Json.Utilities
 {
     internal class DynamicReflectionDelegateFactory : ReflectionDelegateFactory
     {
@@ -55,7 +55,7 @@ namespace Newtonsoft.Json.Utilities
             ILGenerator generator = dynamicMethod.GetILGenerator();
 
             GenerateCreateMethodCallIL(method, generator, 0);
-            
+
             return (ObjectConstructor<object>)dynamicMethod.CreateDelegate(typeof(ObjectConstructor<object>));
         }
 
@@ -166,13 +166,13 @@ namespace Newtonsoft.Json.Utilities
 
                     // argument has value, try to convert it to parameter type
                     generator.MarkLabel(skipSettingDefault);
-                    
+
                     if (parameterType.IsPrimitive())
                     {
                         // for primitive types we need to handle type widening (e.g. short -> int)
                         MethodInfo toParameterTypeMethod = typeof(IConvertible)
                             .GetMethod("To" + parameterType.Name, new[] { typeof(IFormatProvider) });
-                        
+
                         if (toParameterTypeMethod != null)
                         {
                             Label skipConvertible = generator.DefineLabel();
@@ -205,7 +205,7 @@ namespace Newtonsoft.Json.Utilities
                     generator.Emit(OpCodes.Ldloc_S, localObject);
 
                     generator.UnboxIfNeeded(parameterType);
-                    
+
                     // parameter finished, we out!
                     generator.MarkLabel(finishedProcessingParameter);
                 }

@@ -34,12 +34,12 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Diagnostics.CodeAnalysis;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using Deli.Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 
-namespace Newtonsoft.Json.Utilities
+namespace Deli.Newtonsoft.Json.Utilities
 {
     internal static class BufferUtils
     {
@@ -328,7 +328,7 @@ namespace Newtonsoft.Json.Utilities
                 return w.ToString();
             }
         }
-        
+
         private static int FirstCharToEscape(string s, bool[] charEscapeFlags, StringEscapeHandling stringEscapeHandling)
         {
             for (int i = 0; i != s.Length; i++)
@@ -401,7 +401,7 @@ namespace Newtonsoft.Json.Utilities
             }
 
             return WriteCharAsync(task, writer, delimiter, cancellationToken);
-            
+
         }
 
         private static async Task WriteEscapedJavaScriptStringWithDelimitersAsync(Task task, TextWriter writer, string s, char delimiter,

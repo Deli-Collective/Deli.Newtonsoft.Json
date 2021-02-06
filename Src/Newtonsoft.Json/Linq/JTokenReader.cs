@@ -24,9 +24,9 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json.Linq
+namespace Deli.Newtonsoft.Json.Linq
 {
     /// <summary>
     /// Represents a reader that provides fast, non-cached, forward-only access to serialized JSON data.
@@ -308,7 +308,7 @@ namespace Newtonsoft.Json.Linq
         }
 
         /// <summary>
-        /// Gets the path of the current JSON token. 
+        /// Gets the path of the current JSON token.
         /// </summary>
         public override string Path
         {

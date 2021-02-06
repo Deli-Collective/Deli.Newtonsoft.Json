@@ -26,11 +26,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Utilities;
 using System.IO;
 using System.Globalization;
 
-namespace Newtonsoft.Json.Linq
+namespace Deli.Newtonsoft.Json.Linq
 {
     /// <summary>
     /// Represents a JSON array.
@@ -99,7 +99,7 @@ namespace Newtonsoft.Json.Linq
         }
 
         /// <summary>
-        /// Loads an <see cref="JArray"/> from a <see cref="JsonReader"/>. 
+        /// Loads an <see cref="JArray"/> from a <see cref="JsonReader"/>.
         /// </summary>
         /// <param name="reader">A <see cref="JsonReader"/> that will be read for the content of the <see cref="JArray"/>.</param>
         /// <returns>A <see cref="JArray"/> that contains the JSON that was read from the specified <see cref="JsonReader"/>.</returns>
@@ -109,7 +109,7 @@ namespace Newtonsoft.Json.Linq
         }
 
         /// <summary>
-        /// Loads an <see cref="JArray"/> from a <see cref="JsonReader"/>. 
+        /// Loads an <see cref="JArray"/> from a <see cref="JsonReader"/>.
         /// </summary>
         /// <param name="reader">A <see cref="JsonReader"/> that will be read for the content of the <see cref="JArray"/>.</param>
         /// <param name="settings">The <see cref="JsonLoadSettings"/> used to load the JSON.

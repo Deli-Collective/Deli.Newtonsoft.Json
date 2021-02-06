@@ -25,9 +25,9 @@
 
 using System;
 using System.Reflection;
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json.Converters
+namespace Deli.Newtonsoft.Json.Converters
 {
     /// <summary>
     /// Creates a custom object.

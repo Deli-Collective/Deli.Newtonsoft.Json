@@ -30,13 +30,13 @@ using System.Text;
 using System.Globalization;
 using System.Diagnostics.CodeAnalysis;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using Deli.Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
-using Newtonsoft.Json.Serialization;
+using Deli.Newtonsoft.Json.Serialization;
 
-namespace Newtonsoft.Json.Utilities
+namespace Deli.Newtonsoft.Json.Utilities
 {
     internal static class StringUtils
     {
@@ -171,7 +171,7 @@ namespace Newtonsoft.Json.Utilities
                 bool hasNext = (i + 1 < chars.Length);
                 if (i > 0 && hasNext && !char.IsUpper(chars[i + 1]))
                 {
-                    // if the next character is a space, which is not considered uppercase 
+                    // if the next character is a space, which is not considered uppercase
                     // (otherwise we wouldn't be here...)
                     // we want to ensure that the following:
                     // 'FOO bar' is rewritten as 'foo bar', and not as 'foO bar'

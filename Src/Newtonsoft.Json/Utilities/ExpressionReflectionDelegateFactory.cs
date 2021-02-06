@@ -31,9 +31,9 @@ using System.Text;
 using System;
 using System.Linq.Expressions;
 using System.Reflection;
-using Newtonsoft.Json.Serialization;
+using Deli.Newtonsoft.Json.Serialization;
 
-namespace Newtonsoft.Json.Utilities
+namespace Deli.Newtonsoft.Json.Utilities
 {
     internal class ExpressionReflectionDelegateFactory : ReflectionDelegateFactory
     {
@@ -355,11 +355,11 @@ namespace Newtonsoft.Json.Utilities
             Action<T, object?> compiled = (Action<T, object?>)lambdaExpression.Compile();
             return compiled;
         }
-        
+
         private Expression EnsureCastExpression(Expression expression, Type targetType, bool allowWidening = false)
         {
             Type expressionType = expression.Type;
-            
+
             // check if a cast or conversion is required
             if (expressionType == targetType || (!expressionType.IsValueType() && targetType.IsAssignableFrom(expressionType)))
             {
@@ -383,10 +383,10 @@ namespace Newtonsoft.Json.Utilities
                             Expression.Call(toTargetTypeMethod, expression));
                     }
                 }
-                
+
                 return Expression.Condition(
                     Expression.Equal(expression, Expression.Constant(null, typeof(object))),
-                    Expression.Default(targetType), 
+                    Expression.Default(targetType),
                     convert);
             }
 

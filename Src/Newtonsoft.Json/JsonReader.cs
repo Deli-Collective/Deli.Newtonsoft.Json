@@ -30,10 +30,10 @@ using System.Globalization;
 #if HAVE_BIG_INTEGER
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Serialization;
+using Deli.Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json
+namespace Deli.Newtonsoft.Json
 {
     /// <summary>
     /// Represents a reader that provides fast, non-cached, forward-only access to serialized JSON data.
@@ -243,7 +243,7 @@ namespace Newtonsoft.Json
         }
 
         /// <summary>
-        /// Gets the type of the current JSON token. 
+        /// Gets the type of the current JSON token.
         /// </summary>
         public virtual JsonToken TokenType => _tokenType;
 
@@ -278,7 +278,7 @@ namespace Newtonsoft.Json
         }
 
         /// <summary>
-        /// Gets the path of the current JSON token. 
+        /// Gets the path of the current JSON token.
         /// </summary>
         public virtual string Path
         {
@@ -750,7 +750,7 @@ namespace Newtonsoft.Json
                 case JsonToken.Integer:
                 case JsonToken.Float:
                     object v = Value!;
-                    
+
                     if (v is decimal d)
                     {
                         return d;

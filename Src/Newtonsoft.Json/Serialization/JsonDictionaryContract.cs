@@ -27,14 +27,14 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Reflection;
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Utilities;
 using System.Collections;
 
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using Deli.Newtonsoft.Json.Utilities.LinqBridge;
 #endif
 
-namespace Newtonsoft.Json.Serialization
+namespace Deli.Newtonsoft.Json.Serialization
 {
     /// <summary>
     /// Contract details for a <see cref="System.Type"/> used by the <see cref="JsonSerializer"/>.
@@ -204,7 +204,7 @@ namespace Newtonsoft.Json.Serialization
             }
 #endif
 
-            if (DictionaryKeyType != null && 
+            if (DictionaryKeyType != null &&
                 DictionaryValueType != null &&
                 ImmutableCollectionsUtils.TryBuildImmutableForDictionaryContract(
                     underlyingType,

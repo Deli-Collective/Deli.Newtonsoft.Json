@@ -31,9 +31,9 @@ using System.Diagnostics;
 #if HAVE_BIG_INTEGER
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Utilities;
+using Deli.Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json
+namespace Deli.Newtonsoft.Json
 {
     internal enum ReadType
     {
@@ -164,7 +164,7 @@ namespace Newtonsoft.Json
         }
 
         private void ParseReadString(char quote, ReadType readType)
-        { 
+        {
             SetPostValueState(true);
 
             switch (readType)
@@ -2245,7 +2245,7 @@ namespace Newtonsoft.Json
 
 #if HAVE_BIG_INTEGER
         // By using the BigInteger type in a separate method,
-        // the runtime can execute the ParseNumber even if 
+        // the runtime can execute the ParseNumber even if
         // the System.Numerics.BigInteger.Parse method is
         // missing, which happens in some versions of Mono
         [MethodImpl(MethodImplOptions.NoInlining)]
